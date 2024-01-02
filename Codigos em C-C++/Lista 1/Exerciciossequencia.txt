@@ -1,0 +1,49 @@
+1)
+#include <stdio.h>
+//#include <windows.h>
+
+main () {
+	int n, ant, suc;
+	
+	//system ("chcp 1252 > nul");
+	
+	printf ("Digite um número inteiro: ");
+	scanf ("%d", &n);
+	
+	ant = n - 1;
+	suc = n + 1;
+	
+	printf ("\nO valor do antecessor do número escolhido é: %d", ant);
+	printf ("\nO valor do sucessor do número é: %d", suc);
+}
+
+
+
+2)
+#include <stdio.h>
+
+main () {
+	float pol, cm;
+	
+	printf ("Digite uma medida em polegada: ");
+	scanf ("%f", &pol);
+	
+	cm = 2.54*pol;
+	
+	printf ("\nO valor da medida escolhida em cm é: %.2f", cm);
+}
+
+
+3)
+#include <stdio.h>
+
+main () {
+	float custoFab, custoF;
+	
+	printf ("Digite o valor do custo de fabrica do carro em reais: ");
+	scanf ("%f", &custoFab);
+	
+	custoF = custoFab + 0.28*custoFab + 0.45*custoFab;
+	
+	printf ("\nO valor final do carro novo é: %.2f", custoF);
+}

@@ -1,0 +1,192 @@
+#include <iostream>
+using namespace std;
+#define a 1.33 //é a parte do "4/3" da expressão do volume
+#define pi 3.14
+float Vesf (float r);
+
+float r;
+
+main()
+{
+    float resultado;
+    
+    do {
+        cout<<"\nDigite o valor do raio desejado (m): ";
+        cin>>r;
+        if (r<=0) {
+            cout<<"Erro! Digite valores positivos";
+        }
+    } while (r<=0);
+    
+    resultado=Vesf(r);
+    cout<<"O volume é igual a: "<<resultado<<" m³";
+    
+}
+
+float Vesf (float r) {
+    float volume;
+    volume = a*pi*r*r*r;
+    return volume;
+}
+
+
+
+
+
+
+#include <iostream>
+using namespace std;
+void medArit (float n1, float n2, float n3);
+void medPond (float n1, float n2, float n3);
+void medHarm (float n1, float n2, float n3);
+
+float n1, n2, n3;
+char tipomed;
+
+main()
+{
+    do {
+        cout<<"\nDigite a nota 1 do aluno: ";
+        cin>>n1;
+        cout<<"Digite a nota 2 do aluno: ";
+        cin>>n2;
+        cout<<"Digite a nota 3 do aluno: ";
+        cin>>n3;
+        if ((n1<0 || n1>10) || (n2<0 || n2>10) || (n3<0 || n3>10)) {
+            cout<<"Erro! Digite notas validas entre 0 e 10";
+        }
+    } while ((n1<0 || n1>10) || (n2<0 || n2>10) || (n3<0 || n3>10));
+    
+    do {
+        cout<<"\nDigite o tipo de media a ser calculada (A, P e H): ";
+        cin>>tipomed;
+        if (tipomed != 'a' && tipomed != 'A' && tipomed != 'p' && tipomed != 'P' && tipomed != 'h' && tipomed != 'H') {
+            cout<<"ERRO! Digite uma opcao valida (A, P, H)";
+        }
+    } while (tipomed != 'a' && tipomed != 'A' && tipomed != 'p' && tipomed != 'P' && tipomed != 'h' && tipomed != 'H');
+    
+    switch (tipomed) {
+        case 'a': case 'A':
+        medArit(n1,n2,n3);
+        break;
+        
+        case 'p': case 'P':
+        medPond(n1,n2,n3);
+        break;
+        
+        case 'h': case 'H':
+        medHarm(n1,n2,n3);
+        break;
+    }
+    
+}
+
+void medArit (float n1, float n2, float n3) {
+    float medAr;
+    medAr=(n1+n2+n3)/3;
+    cout<<"O resultado da media aritmetica é igual a: "<<medAr;
+}
+
+void medPond (float n1, float n2, float n3) {
+    float medP;
+    medP=(5*n1+3*n2+2*n3)/8;
+    cout<<"O resultado da media aritmetica é igual a: "<<medP;
+}
+
+void medHarm (float n1, float n2, float n3) {
+    float medH;
+    medH=3/((1/n1)+(1/n2)+(1/n3));
+    cout<<"O resultado da media aritmetica é igual a: "<<medH;
+}
+
+
+
+
+
+
+3.1 )
+#include <iostream>
+using namespace std;
+int transformacao (int a, int m, int d);
+
+int a, m, d;
+char tipomed;
+
+main()
+{
+    cout<<"Digite os anos da idade da pessoa: ";
+    cin>>a;
+    cout<<"Digite os meses da idade da pessoa: ";
+    cin>>m;
+    cout<<"Digite os dias da idade da pessoa: ";
+    cin>>d;
+    
+    cout<<"A idade equivalente da pessoa em dias é: "<<transformacao(a,m,d);
+}
+
+int transformacao (int a, int m, int d) {
+    int idadeDias;
+    idadeDias=365*a+30*m+d;
+    return idadeDias;
+}
+
+
+
+3.2)
+#include <iostream>
+using namespace std;
+int transformacao (int a, int m, int d);
+
+int a, m, d, meses, restod, ano, restom;
+char tipomed;
+
+main()
+{
+    do {
+        cout<<"\nDigite os dias da idade da pessoa: ";
+        cin>>d;
+        if (d<0 || d>=30) {
+            cout<<"Erro! Apenas valores de dias entre 0 e 30";
+            if (d>=30) {
+                meses=d/30;
+                restod=d-30;
+                cout<<"\nComo utilizou mais que 30 dias, é necessario adicionar em meses a quantidade de: "<<meses;
+                cout<<"\nO valor de dias que deve ser colocado é: "<<restod;
+            }
+        }
+    } while (d<0 || d>=30);
+    
+    do {
+        cout<<"\nDigite os meses da idade da pessoa: ";
+        cin>>m;
+        if (m<0 || m>=12) {
+            cout<<"Erro! Apenas valores de meses entre 0 e 12";
+            if (m>=12) {
+                ano=m/12;
+                restom=m-12;
+                cout<<"\nComo utilizou mais que 12 meses, é necessario adicionar em anos a quantidade de: "<<ano;
+                cout<<"\nO valor de meses que deve ser colocado é: "<<restom;
+            }
+        }
+    } while (m<0 || m>=12);
+    
+    do {
+        cout<<"\nDigite os anos da idade da pessoa: ";
+        cin>>a;
+        if (a<0) {
+            cout<<"Erro! Digite idade em anos valida";
+        }
+    } while (a<0);
+    
+    cout<<"A idade equivalente da pessoa em dias é: "<<transformacao(a,m,d);
+}
+
+int transformacao (int a, int m, int d) {
+    int idadeDias;
+    idadeDias=365*a+30*m+d;
+    return idadeDias;
+}
+
+
+
+

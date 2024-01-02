@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <title>Super Calculadora WEB</title>
+  </head>
+  <body>
+    <header>
+      <h1 class="title">Super Calculadora WEB</h1>
+    </header>
+
+    <main>
+      <label for="input-numberA"
+        ><strong class="texto">Primeiro número (A)</strong></label
+      >
+      <input id="input-numberA" type="number" value="0" step="1" />
+
+      <label for="input-numberB"
+        ><strong class="texto">Segundo número (B) </strong>
+      </label>
+      <input id="input-numberB" type="number" value="0" step="1" />
+
+      <button id="button-calculate">Calcular</button>
+
+      <br /><br />
+
+      <table>
+        <thead>
+          <tr>
+            <th><h3>Soma</h3></th>
+            <th><h3>Subtração(A-B)</h3></th>
+            <th><h3>Subtração(B-A)</h3></th>
+            <th><h3>Multiplicação</h3></th>
+            <th><h3>Divisão A/B</h3></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td><strong id="result-soma"></strong></td>
+            <td><strong id="result-subAB"></strong></td>
+            <td><strong id="result-subBA"></strong></td>
+            <td><strong id="result-mult"></strong></td>
+            <td><strong id="result-divAB"></strong></td>
+          </tr>
+
+          <tr>
+            <th><h3>Divisão B/A</h3></th>
+            <th><h3>Potência de A na base B</h3></th>
+            <th><h3>Potência de B na base A</h3></th>
+            <th><h3>Raiz quadrada de A</h3></th>
+            <th><h3>Raiz quadrada de B</h3></th>
+          </tr>
+
+          <tr>
+            <td><strong id="result-divBA"></strong></td>
+            <td><strong id="result-potAB"></strong></td>
+            <td><strong id="result-potBA"></strong></td>
+            <td><strong id="result-raizA"></strong></td>
+            <td><strong id="result-raizB"></strong></td>
+          </tr>
+
+          <tr>
+            <th><h3>Fatorial de A</h3></th>
+            <th><h3>Fatorial de B</h3></th>
+            <th><h3>Porcentagem de A em relação a B</h3></th>
+            <th><h3>Porcentagem de B em relação a A</h3></th>
+            <th><h3>Média</h3></th>
+          </tr>
+
+          <tr>
+            <td><strong id="result-fatA"></strong></td>
+            <td><strong id="result-fatB"></strong></td>
+            <td><strong id="result-porcAB"></strong>%</td>
+            <td><strong id="result-porcBA"></strong>%</td>
+            <td><strong id="result-media"></strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+
+    <script defer src="./js/script.js"></script>
+  </body>
+</html>

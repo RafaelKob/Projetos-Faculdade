@@ -1,0 +1,27 @@
+A) Procedimento
+
+Trata-se de um trecho de código com função específica escrito fora do código principal para facilitar e simplificar. Não havendo a necessidade de repetir o mesmo trecho de código, pois, dessa forma, é possível chamar o procedimento no código principal quando necessário. No caso do procedimento não há retornos, ja é realizado a impressão.
+
+B) Função
+
+Possui o mesmo intuito do procedimento, porém na função é necessário que haja o retorno da variável, sem a utilização da impressão direta, ou seja, a impressão deve ser feita no código principal.
+
+C) Parâmetro por valor
+
+Os parametros formais da função copiam os valores dos parâmetros que são passados para a função. Isto quer dizer que não são alterados os valores que os parâmetros tem fora da função. Este tipo de chamada de função é denominado chamada por valor. Isto ocorre porque são passados para a função apenas os valores dos parâmetros e não os próprios parâmetros.
+
+D) Parâmetro por referência
+
+É outro tipo de passagem de parâmetros para uma  função ocorre quando alterações nos parâmetros formais, dentro da função, alteram os valores dos parâmetros que foram passados para a função. Este tipo de chamada de função tem o nome de "chamada por referência". Este nome vem do fato de que, neste tipo de chamada, não se passa para a função os valores das variáveis, mas sim suas referências (a função usa as referências para alterar os valores das variáveis fora da função).
+
+E) Variável local
+
+São variáveis utilizadas e declaradas apenas dentro de uma função/procedimento, não podendo ser utilizadas sem a constante declaração.
+
+F) Variável global
+
+São variáveis que são declaradas como "publicas" fora de qualquer função/procedimento e dessa forma pode ser utilizada em qualquer função sem a necessidade de ser declarada novamente.
+
+G) Prototipo
+
+É como se fosse a declaração de uma função ou procedimento no inicio do código, dessa forma não é necessario escrever as funções/procedimentos na ordem de uso. Uma função/procedimento pode ser chamada por outra função/procedimento mesmo que em ordem de escrita esteja posterior.

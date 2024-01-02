@@ -1,0 +1,139 @@
+1)
+
+#include <iostream>
+using namespace std;
+
+main()
+{
+    int A[6]={1,0,5,-2,-5,7}, soma=0, i;
+    
+    soma=A[0]+A[1]+A[5];
+    cout<<"A soma de A[0]+A[1]+A[5] é: "<<soma<<"\n";
+    
+    A[4]=100;
+    
+    for (i=0; i<6; i++) {
+        cout<<A[i]<<"\n";
+    }
+}
+
+
+
+2)
+
+#include <iostream>
+using namespace std;
+
+main()
+{
+    float A[10], B[10];
+    int i;
+    
+    cout<<"Digite os elementos do vetor A: ";
+    for (i=0; i<10; i++) {
+        cin>>A[i];
+    }
+    
+    cout<<"O vetor A escolhido é: ";
+    for (i=0; i<10; i++) {
+        cout<<A[i]<<" ";
+    }
+    
+    for (i=0; i<10; i++) {
+        if (i%2==0) {
+            B[i]=5*A[i];
+        } else {
+            B[i]=A[i]+5;
+        }
+    }
+    
+    cout<<"\nO vetor B pedido é: ";
+    for (i=0; i<10; i++) {
+        cout<<B[i]<<" ";
+    }
+}
+
+
+
+3) 
+
+
+#include <iostream>
+using namespace std;
+
+main()
+{
+    int A[10], B[10], troca;
+    int i;
+    
+    cout<<"Digite os elementos do vetor A: ";
+    for (i=0; i<10; i++) {
+        cin>>A[i];
+    }
+    
+    cout<<"O vetor A escolhido é: ";
+    for (i=0; i<10; i++) {
+        cout<<A[i]<<" ";
+    }
+    
+    cout<<"\nDigite os elementos do vetor B: ";
+    for (i=0; i<10; i++) {
+        cin>>B[i];
+    }
+    
+    cout<<"O vetor B escolhido é: ";
+    for (i=0; i<10; i++) {
+        cout<<B[i]<<" ";
+    }
+     
+    for (i=0; i<10; i++) {
+        troca=B[9-i];
+		B[9-i]=A[i];
+		A[i]=troca;
+    }
+    
+    cout<<"\nO vetor A apos a troca: ";
+    for (i=0; i<10; i++) {
+        cout<<A[i]<<" ";
+    }
+    
+    cout<<"\nO vetor B apos a troca: ";
+    for (i=0; i<10; i++) {
+        cout<<B[i]<<" ";
+    }
+}
+
+
+
+4)
+
+#include <iostream>
+using namespace std;
+
+main()
+{
+    int vetor[10], troca;
+    int i;
+    
+    cout<<"Digite os elementos do vetor A: ";
+    for (i=0; i<10; i++) {
+        cin>>vetor[i];
+    }
+    
+    cout<<"O vetor escolhido é: ";
+    for (i=0; i<10; i++) {
+        cout<<vetor[i]<<" ";
+    }
+      
+    for (i=0; i<5; i++) {
+        troca=vetor[9-i];
+        vetor[9-i]=vetor[i];
+        vetor[i]=troca;
+    }
+    
+    cout<<"\nO vetor apos a troca: ";
+    for (i=0; i<10; i++) {
+        cout<<vetor[i]<<" ";
+    } 
+}
+

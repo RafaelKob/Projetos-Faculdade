@@ -1,0 +1,149 @@
+1)
+#include <stdio.h>
+
+main () {
+	int n1, n2;
+	
+	printf ("Digite o primeiro numero inteiro: ");
+	scanf ("%d", &n1);
+	
+	printf ("Digite o segundo numero inteiro: ");
+	scanf ("%d", &n2);
+	
+	if (n1==n2) {
+		printf ("Os numeros sao iguais");
+	} else {
+		printf ("Os numeros sao diferentes");
+	}
+}
+
+
+
+2)
+#include <stdio.h>
+
+main () {
+	int nmaca;
+	float ct;
+	
+	printf ("Digite o numero de macas a serem compradas: ");
+	scanf ("%d", &nmaca);
+	
+	if (nmaca < 12) {
+		ct = 1.3*nmaca;
+		printf ("O custo total a ser pago pelas macas é: %.2f", ct);
+	} else {
+		ct = 1.0*nmaca;
+		printf ("O custo total a ser pago pelas macas é: %.2f", ct);
+	}
+}
+
+
+
+3)
+#include <stdio.h>
+
+main () {
+	int tipo;
+	float valorcompra,valorf;
+	
+	printf ("Informe qual o tipo de cliente:\n 1-cliente comum \n 2-funcionario \n 3-vip \n");
+	scanf ("%d", &tipo);
+	
+	printf ("Digite o valor da compra de uma pessoa: ");
+	scanf ("%f", &valorcompra);
+	
+	if (tipo==1) {
+		valorf = valorcompra;
+		printf ("O valor da compra com desconto para cliente comum é: %.2f", valorf);
+	} else if (tipo==2) {
+		valorf = 0.9*valorcompra;
+		printf ("O valor da compra com desconto para funcionario é: %.2f", valorf);		
+	} else if (tipo==3) {
+		valorf = 0.95*valorcompra;
+		printf ("O valor da compra com desconto para cliente vip é: %.2f", valorf);
+	} else {
+		printf ("Foi informado um tipo invalido de cliente");
+	}
+}
+
+
+
+4)
+#include <stdio.h>
+
+main () {
+	float n1, n2, media;
+	
+	printf ("Informe as duas notas de prova do aluno: "); 
+	scanf ("%f%f", &n1, &n2); //escrever duas variaveis na mesma linha
+	
+	media = (n1+n2)/2;
+	
+	if (media >= 6) {
+		printf ("A media do aluno é: %.1f", media);
+		printf (" E o aluno foi aprovado");
+	} else {
+		printf ("A media do aluno é: %.1f", media);
+		printf (" E o aluno foi reprovado");
+	}
+}
+
+
+
+5)
+#include <stdio.h>
+
+main () {
+	int idade;
+	
+	printf ("Informe a idade do atleta: "); 
+	scanf ("%d", &idade); 
+	
+	if (idade>=5 && idade<=7) {
+		printf ("O atleta esta na categoria INFANTIL A");
+	} else if (idade>=8 && idade<=10) {
+		printf ("O atleta esta na categoria INFANTIL B");
+	} else if (idade>=11 && idade<=13) {
+		printf ("O atleta esta na categoria JUVENIL A");
+	} else if (idade>=14 && idade<=17) {
+		printf ("O atleta esta na categoria JUVENIL B");
+	} else if (idade>=18) {
+		printf ("O atleta esta na categoria ADULTO");
+	} else {
+		printf ("O atleta nao encaixa em nenhuma categoria");
+	}
+}
+
+
+
+6) 
+#include <stdio.h>
+
+main () {
+	int tipo;
+	float litros, ct;
+	
+	printf ("Informe o tipo de combustivel a ser usado: \n 1-alcool \n 2-gasolina \n"); 
+	scanf ("%d", &tipo); 
+	
+	printf ("Informe o numero de litros comprados: "); 
+	scanf ("%f", &litros); 
+	
+	
+	if (tipo==1) {
+		if (litros<=20) {
+			ct=2.90*0.97*litros;
+		} else {
+			ct=2.9*0.95*litros;
+		}
+		printf ("O valor a ser pago pelo cliente é: %.2f", ct);
+	} else if (tipo==2) {
+		if (litros<=20) {
+			ct=3.30*0.96*litros;
+		} else {
+			ct=3.30*0.94*litros;
+		}
+		printf ("O valor a ser pago pelo cliente é: %.2f", ct);
+	}
+}

@@ -1,0 +1,1 @@
+Desenvolvimento de uma calculadora WEB como atividade do minicamp da XPE em javascript com auxilio de professores
