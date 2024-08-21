@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="../_css/estilo.css"/>
+    <meta charset="UTF-8"/>
+    <title>Curso de PHP - CursoemVideo.com</title>
+</head>
+<body>
+<div>
+	<form method="get" action="formIdade.php">
+		<table>
+		<th>
+			Formulário de cadastro
+		</th>
+			<tr>
+				<td>
+					Nome: <input type="text" name="nome"/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Ano de nascimento: <input type="number" name="ano"/>
+				</td>
+			</tr>
+				<td>
+					<fieldset><Legend>Sexo</legend>
+						<input type="radio" name="sexo" id="masc" value="homem" checked/>
+						<label for="masc">Masculino</label><br/>
+						<input type="radio" name="sexo" id="fem" value="mulher"/>
+						<label for="fem">Feminino</label>
+					</fieldset>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="submit" value="Enviar"/>
+				</td>
+			</tr>
+		</table>
+	</form>
+</div>
+</body>
+</html>
+ 
